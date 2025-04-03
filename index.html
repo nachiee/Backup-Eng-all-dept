@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎥 Telegram Movie Channel</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center; /* Center text for mobile */
+            padding: 10px; /* Add padding for edge-to-edge screens */
+        }
+
+        .text {
+            color: #fff;
+            font-size: 1.5em; /* Reduced for mobile readability */
+            text-transform: uppercase;
+            letter-spacing: 2px; /* Slightly reduced spacing */
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            z-index: 2;
+            animation: fadeIn 2s ease-in-out;
+            line-height: 1.4; /* Better line spacing for mobile */
+            word-wrap: break-word; /* Prevent text overflow */
+            max-width: 90%; /* Ensure text fits screen */
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .circle1 {
+            width: 80px; /* Smaller for mobile */
+            height: 80px;
+            top: 5%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .circle2 {
+            width: 60px;
+            height: 60px;
+            bottom: 10%;
+            right: 5%;
+            animation-delay: 2s;
+        }
+
+        .circle3 {
+            width: 40px;
+            height: 40px;
+            top: 70%;
+            left: 15%;
+            animation-delay: 4s;
+        }
+
+        .line {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.2);
+            animation: move 8s linear infinite;
+        }
+
+        .line1 {
+            width: 1px; /* Thinner for mobile */
+            height: 40px;
+            top: 0;
+            left: 15%;
+        }
+
+        .line2 {
+            width: 70px;
+            height: 1px;
+            bottom: 20%;
+            right: 0;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); } /* Reduced movement */
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes move {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(100vw); }
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px; /* Smaller particles for mobile */
+            height: 2px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: sparkle 3s infinite;
+        }
+
+        @keyframes sparkle {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        /* Media query for extra small screens */
+        @media (max-width: 360px) {
+            .text {
+                font-size: 1.2em;
+            }
+            .circle1 { width: 60px; height: 60px; }
+            .circle2 { width: 50px; height: 50px; }
+            .circle3 { width: 30px; height: 30px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text">पहिले माझ्यासाठी गर्लफ्रेंड दे शोधून 🔫 नंतर बघ MOVIES. 💔🥀❤️‍🩹🕊️</div>
+        
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+        
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        
+        <div class="particle" style="top: 20%; left: 30%; animation-delay: 0s;"></div>
+        <div class="particle" style="top: 40%; left: 60%; animation-delay: 1s;"></div>
+        <div class="particle" style="top: 70%; left: 20%; animation-delay: 2s;"></div>
+        <div class="particle" style="top: 50%; left: 80%; animation-delay: 0.5s;"></div>
+    </div>
+</body>
+</html>
